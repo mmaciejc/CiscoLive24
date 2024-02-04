@@ -4,12 +4,12 @@
 
 resource "fmc_host_objects" "server1" {
     name        = "Server_1"
-    value       = "10.0.20.100"
+    value       = var.server_1_ip
     description = "Managed by Terraform"
 }
 resource "fmc_host_objects" "server2" {
     name        = "Server_2"
-    value       = "10.0.20.200"
+    value       = var.server_2_ip
     description = "Managed by Terraform"
 }
 
