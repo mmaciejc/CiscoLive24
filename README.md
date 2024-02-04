@@ -84,6 +84,13 @@ No changes. Your infrastructure matches the configuration.
 Terraform has compared your real infrastructure against your configuration and found no differences, so no changes are needed.
 ```
 #### Task 3:
+Login to FMC:
+- create initial password (please use `CiscoLive24!`), 
+- select evaluation license valid for 90 days,
+- create admin user: `apiadmin` with password: `CiscoLive24!`
+
+* you will use these data in task #5
+#### Task 4:
 
 Please be careful to keep the different Terraform configurations in the separate folders.
 ```bash
@@ -100,16 +107,17 @@ README.md			resource-ftdnatpolicy.tf	resource-policy_deployment.tf	terraform.tfv
 
 ```
 
-#### Task 4: Create Terraform variables file:
+#### Task 5: Create Terraform variables file:
 
 
 ```hcl
 fmc_username = "<please update>"
 fmc_password = "<please update>"
 fmc_hostname = "<please update>"
+ftd_mgmt_ip = "<please update>"
 ```
 
-#### Task 5: Review and confirm current configuration
+#### Task 6: Review and confirm current configuration
 ```bash
 % cat resource-devices.tf 
 
@@ -135,7 +143,7 @@ resource "fmc_devices" "Device1" {
 }
 ```
 
-#### Task 6: Execute Terraform
+#### Task 7: Execute Terraform
 
 ```bash
 % terraform init
@@ -143,3 +151,6 @@ resource "fmc_devices" "Device1" {
 % terraform apply
 ```
 
+#### Task 8: Verify the deployment
+- The FMC should deploy configuration to FTD
+- You should be able to access Server_1 on port `8080`

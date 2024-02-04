@@ -21,13 +21,3 @@ variable "ftd_mgmt_ip" {
   type = string
   description = "FTD Management Private IP address"
 }
-
-variable "ftd_outside_ip" {
-  type = string
-  description = "FTD Outside Private IP address"
-}
-
-variable "ftd_inside_ip" {
-  type = string
-  description = "FTD Inside Private IP address"
-}
