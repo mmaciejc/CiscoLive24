@@ -1,0 +1,18 @@
+# Terraform state files
+terraform.tfstate
+terraform.tfstate*
+.terraform/
+.terraform*
+
+# Credentials
+.env
+
+# Cache
+cache/
+.DS_Store
+__pycache__/
+
+
+
+
+

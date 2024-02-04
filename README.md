@@ -1,4 +1,4 @@
-Welcome to CiscoLive WIL LABSEC-2334 tutorial!
+# Welcome to CiscoLive WIL LABSEC-2334 tutorial!
 
 ## Introduction
 
@@ -14,6 +14,9 @@ Other devices in use:
 - Server 1 - running Apache2 on port 80
 - Server 2 - running Apache2 on port 80
 
+#### Optional:
+Here is the link to the initial repository from which CSF enviroment was provisioned `https://github.com/mmaciejc/CiscoLive24_AWS_infra`
+
 
 ## Goal of the Lab:
 To save time, the Firewalls are already deployed in the AWS cloud but have no configuration.
@@ -28,6 +31,8 @@ We are going to push the configuration that will create:
 As a result we should be able to access Linux server which is in Private subnet of AWS VPC.
 
 ## Network Diagram
+Lab diagram
+![Lab diagram](./img/lab.png)
 
 ## Lab tasks:
 To complete this lab, you would need to go through the following tasks:
@@ -49,9 +54,8 @@ Please SSH to Linux host and verify:
 
 In the user home directory `~/` there shold be folder named `aws_fw`. In this folder there is a Terraform configuration for provisioned Secure Firewall virtual components.
 ```bash
-% cd ..
-% cd aws_fw 
-% terraform output
+~$ cd CiscoLive24_AWS_infra
+~/CiscoLive24_AWS_infra$ terraform output
 Serv-a_IP_Priv = toset([
   "<IP of the Server 1>",
 ])
@@ -106,7 +110,30 @@ fmc_hostname = "<please update>"
 ```
 
 #### Task 5: Review and confirm current configuration
+```bash
+% cat resource-devices.tf 
 
+###########################################
+#### Define device
+###########################################
+
+resource "fmc_devices" "Device1" {
+
+  # Mandatory  
+  name              = "vFTD"
+  hostname          = var.ftd_mgmt_ip
+  regkey            = "Cisco123"
+
+  access_policy { 
+    id = fmc_access_policies.AccessPolicy1.id
+	}
+
+  # Optional  
+  license_caps = ["THREAT"]
+  performance_tier  = "FTDv5"
+
+}
+```
 
 #### Task 6: Execute Terraform
 
@@ -115,3 +142,4 @@ fmc_hostname = "<please update>"
 % terraform plan
 % terraform apply
 ```
+
