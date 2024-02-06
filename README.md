@@ -99,6 +99,8 @@ Login to FMC (Public IP of the FMC is in outputs from Task 2 lisetd as `fmc_host
 Please be careful to keep the different Terraform configurations in the separate folders.
 ```bash
 % cd ../
+$ pwd
+/home/user_1
 % git clone https://github.com/mmaciejc/CiscoLive24
 % cd CiscoLive24
 % ls
