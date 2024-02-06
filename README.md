@@ -86,7 +86,7 @@ No changes. Your infrastructure matches the configuration.
 Terraform has compared your real infrastructure against your configuration and found no differences, so no changes are needed.
 ```
 #### Task 3:
-Login to FMC (Public IP of the FMC is in outputs from Task 2 lisetd as `fmc_hostname`):
+Login to FMC (Public IP of the FMC is in outputs from Task 2 lisetd as `https://<fmc_hostname>`):
 - create initial password (please use `CiscoLive24!`), 
 - select evaluation license valid for 90 days,
 ![Lab diagram](./img/eval.png)
