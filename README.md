@@ -90,7 +90,7 @@ Login to FMC (Public IP of the FMC is in outputs from Task 2 lisetd as `https://
 - create initial password (please use `CiscoLive24!`), 
 - select evaluation license valid for 90 days,
 ![Lab diagram](./img/eval.png)
-- create admin user: `apiadmin` with password: `CiscoLive24!`
+- createa a new user: `apiadmin` with password: `CiscoLive24!` with `administrator` privileges.
 ![Lab diagram](./img/user.png)
 
 * you will use these data in task #5

@@ -11,7 +11,7 @@ resource "fmc_host_objects" "server1" {
 
 resource "fmc_port_objects" "API_HTTP" {
 
-  name        = "API_HTTP"
+  name        = "API_HTTP_8080"
   port        = "8080"
   protocol    = "TCP"
 
