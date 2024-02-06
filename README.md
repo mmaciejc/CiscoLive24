@@ -60,19 +60,20 @@ In the user home directory `~/` there shold be folder named `CiscoLive24_AWS_inf
 ~/CiscoLive24_AWS_infra$ terraform output
 
 fmc_hostname = "<IP address>"
-fmcv01_private_ip = "<IP address>"
-ftd_inside_ip = "<IP address>"
+fmcv01_private_ip = "10.0.3.11"
+ftd_inside_ip = "10.0.20.10"
 ftd_mgmt_ip = toset([
-  "<IP address>",
+  "10.0.3.101",
 ])
-ftd_outside_ip = "<IP address>"
+ftd_outside_ip = "10.0.10.11"
 ftdv01_IP = "<IP address>"
 server_1_ip = toset([
-  "<IP address>",
+  "10.0.20.100",
 ])
 server_2_ip = toset([
-  "<IP address>",
+  "10.0.20.200",
 ])
+
 ```
 
 You can verify current CSF deployment in AWS by:
