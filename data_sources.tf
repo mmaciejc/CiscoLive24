@@ -14,10 +14,6 @@ data "fmc_ips_policies" "IntrusionPolicy1" {
   name = "Balanced Security and Connectivity"
 }
 
-data "fmc_ips_policies" "ips_policy" {
-	name = "Balanced Security and Connectivity"
-}
-
 data "fmc_device_physical_interfaces" "PhyInt_TenGig0_0" {
   name = "TenGigabitEthernet0/0"
   device_id = fmc_devices.Device1.id
