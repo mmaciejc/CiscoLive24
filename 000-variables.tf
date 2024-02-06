@@ -26,8 +26,3 @@ variable "server_1_ip" {
   type = string
   description = "Server 1 Private IP address"
 }
-
-variable "server_2_ip" {
-  type = string
-  description = "Server 2 Private IP address"
-}
