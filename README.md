@@ -117,9 +117,9 @@ README.md			resource-ftdnatpolicy.tf	resource-policy_deployment.tf	terraform.tfv
 fmc_username = "apiadmin"
 fmc_password = "<password>"
 fmc_hostname = "<output from Task 2>"
-ftd_mgmt_ip = "10.0.21.10"
-server_1_ip = "10.0.21.100"
-server_2_ip = "10.0.21.200"
+ftd_mgmt_ip = "10.0.20.10"
+server_1_ip = "10.0.20.100"
+server_2_ip = "10.0.20.200"
 ```
 
 #### Task 6: Review and confirm current configuration
