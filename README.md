@@ -111,7 +111,12 @@ README.md			resource-ftdnatpolicy.tf	resource-policy_deployment.tf	terraform.tfv
 
 ```
 
-#### Task 5: Create Terraform variables file:
+#### Task 5: Create Terraform input variables file:
+Please create `terraform.tfvars` file, you might use `vim`, `nano` or ny other editor.
+
+```bash
+vim terraform.tfvars
+```
 
 ```hcl
 fmc_username = "apiadmin"
