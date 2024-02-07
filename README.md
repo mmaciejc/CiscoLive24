@@ -1,11 +1,21 @@
 # Welcome to CiscoLive WIL LABSEC-2334 tutorial!
 
+> <em><strong>Note:</strong></em> From the WIL Assistant page please select the POD you are going to use.
+
 ## Introduction
+
+This is advanced lab where the docummentation is done in IaC (Infrastructure as Code) fasion.
 
 In this exercise, you are going to configure Cisco Secure Firewall via Terraform Provider.
 
+
 > <em><strong>Note:</strong></em> The Cisco Secure Firewall infrastructure has been already deployed in a programmatic way in the AWS environment by Terraform AWS provider.
 
+Terraform Providers:
+- Infrastructure was provisioned by using:
+https://registry.terraform.io/providers/hashicorp/aws/latest/docs
+- Configuration of CSF will be done by using: 
+https://github.com/CiscoDevNet/terraform-provider-fmc
 
 Cisco solution, in this scenario, consists of:
 - Cisco Secure Firewall Management Center (FMC)
